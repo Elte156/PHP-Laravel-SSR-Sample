@@ -19,9 +19,7 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/news', function () {
-    return view('news');
-});
+Route::get('/news', 'NewsController@getNews');
 
 Route::permanentRedirect('/index.html', '/');
 Route::permanentRedirect('/about.html', '/about');
